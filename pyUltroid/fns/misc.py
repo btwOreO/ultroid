@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
+# OreO - UserBot
+# Copyright (C) 2021-2023 TeamOreO
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/TeamOreO/OreO/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/TeamOreO/pyOreO/blob/main/LICENSE>.
 
 import base64
 import os
@@ -157,8 +157,8 @@ async def allcmds(event, telegraph):
         for zz in LIST[z]:
             txt += HNDLR + zz + "\n"
         txt += "\n\n"
-    t = telegraph.create_page(title="Ultroid All Cmds", content=[txt])
-    await eor(event, f"All Ultroid Cmds : [Click Here]({t['url']})", link_preview=False)
+    t = telegraph.create_page(title="OreO All Cmds", content=[txt])
+    await eor(event, f"All OreO Cmds : [Click Here]({t['url']})", link_preview=False)
 
 
 async def ReTrieveFile(input_file_name):

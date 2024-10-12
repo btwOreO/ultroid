@@ -1,9 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
 
 import inspect
 import re
@@ -21,10 +16,10 @@ from . import append_or_update, owner_and_sudos
 OWNER = ultroid_bot.full_name
 
 MSG = f"""
-**Ultroid - UserBot**
+**OreO - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
 **Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
-**Support**: @TeamUltroid
+**Support**: @RiotOreO
 ➖➖➖➖➖➖➖➖➖➖
 """
 
@@ -32,9 +27,9 @@ IN_BTTS = [
     [
         Button.url(
             "Repository",
-            url="https://github.com/TeamUltroid/Ultroid",
+            url="https://github.com/btworeo/ultroid",
         ),
-        Button.url("Support", url="https://t.me/UltroidSupportChat"),
+        Button.url("Support", url="https://t.me/OreoSupportChat"),
     ]
 ]
 
@@ -98,9 +93,9 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="Ultroid Userbot",
-                        url="https://t.me/TeamUltroid",
-                        description="(c) TeamUltroid",
+                        title="OreO Userbot",
+                        url="https://t.me/RiotOreO",
+                        description="© RiotOreO",
                         text=MSG,
                         thumb=InputWebDocument(
                             "https://graph.org/file/dde85d441fa051a0d7d1d.jpg",
@@ -134,7 +129,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/UltroidSupportChat"
+                                    "Report", "https://t.me/OreoSupportChat"
                                 ),
                             )
                         ]

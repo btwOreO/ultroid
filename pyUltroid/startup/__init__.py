@@ -1,9 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
 
 import os
 import platform
@@ -46,7 +41,7 @@ if run_as_module:
     from ..version import __version__ as __pyUltroid__
     from ..version import ultroid_version
 
-    file = f"ultroid{sys.argv[6]}.log" if len(sys.argv) > 6 else "ultroid.log"
+    file = f"oreo{sys.argv[6]}.log" if len(sys.argv) > 6 else "oreo.log"
 
     if os.path.exists(file):
         os.remove(file)
@@ -89,9 +84,9 @@ if run_as_module:
     )
 
     LOGS.info(f"Python version - {platform.python_version()}")
-    LOGS.info(f"py-Ultroid Version - {__pyUltroid__}")
+    LOGS.info(f"py-Oreo Version - {__pyUltroid__}")
     LOGS.info(f"Telethon Version - {__version__} [Layer: {LAYER}]")
-    LOGS.info(f"Ultroid Version - {ultroid_version} [{HOSTED_ON}]")
+    LOGS.info(f"OreoUB Version - {ultroid_version} [{HOSTED_ON}]")
 
     try:
         from safety.tools import *

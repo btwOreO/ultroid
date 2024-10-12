@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
+# oreo
+# Copyright (C) 2021-
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.co
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.clob/main/LICENSE/>.
 
 import ast
 import asyncio
@@ -50,7 +50,7 @@ def text_to_url(event):
 
 _buttons = {
     "otvars": {
-        "text": "Other Variables to set for @TeamUltroid:",
+        "text": "Other Variables to set for @RiotOreO:",
         "buttons": [
             [
                 Button.inline("Tᴀɢ Lᴏɢɢᴇʀ", data="taglog"),
@@ -348,7 +348,7 @@ async def changes(okk):
                 language="md",
             )
             return await okk.edit(
-                f"**• Ultroid Userbot •**{cli}", file=img, buttons=button
+                f"**• Oreo Userbot •**{cli}", file=img, buttons=button
             )
         except Exception as er:
             LOGS.exception(er)
@@ -455,7 +455,7 @@ async def _(e):
         code = await conv.get_response()
         if GDrive._create_token_file(code=code.text):
             await conv.send_message(
-                "`Success!\nYou are all set to use Google Drive with Ultroid Userbot.`",
+                "`Success!\nYou are all set to use Google Drive with Oreo Userbot.`",
                 buttons=Button.inline("Main Menu", data="setter"),
             )
         else:

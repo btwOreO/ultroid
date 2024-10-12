@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
+# oreo - UserBot
+# Copyright (C) 2021-2023 Teamoreo
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Teamoreo/oreo/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Teamoreo/pyoreo/blob/main/LICENSE>.
 
 import time
 from io import FileIO
@@ -102,7 +102,7 @@ class GDriveManager:
         media_body = MediaFileUpload(path, mimetype=mime_type, resumable=True)
         body = {
             "title": filename,
-            "description": "Uploaded using Ultroid Userbot",
+            "description": "Uploaded using OreO Userbot",
             "mimeType": mime_type,
         }
         if folder_id:

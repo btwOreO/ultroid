@@ -1,13 +1,3 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
-#
-#   To Install Other USERBOTs plugin Support
-#
-#   ULTROID Don't Need This Stuffs
 #
 
 import inspect
@@ -87,7 +77,7 @@ class Config((object)):
         )
         TEMP_DOWNLOAD_DIRECTORY = TMP_DOWNLOAD_DIRECTORY
         TEMP_DIR = TMP_DOWNLOAD_DIRECTORY
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Ultroid")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Oreo")
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         TG_BOT_USER_NAME_BF_HER = asst.me.username
         UB_BLACK_LIST_CHAT = [

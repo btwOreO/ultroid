@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
+# OreO - UserBot
+# Copyright (C) 2021-2023 TeamOreO
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/TeamOreO/OreO/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/TeamOreO/pyOreO/blob/main/LICENSE>.
 
 import json
 import math
@@ -560,7 +560,7 @@ def telegraph_client():
     profile_url = (
         f"https://t.me/{ultroid_bot.me.username}"
         if ultroid_bot.me.username
-        else "https://t.me/TeamUltroid"
+        else "https://t.me/RiotoreO"
     )
     try:
         TelegraphClient.create_account(
@@ -569,7 +569,7 @@ def telegraph_client():
     except Exception as er:
         if "SHORT_NAME_TOO_LONG" in str(er):
             TelegraphClient.create_account(
-                short_name="ultroiduser", author_name=gd_name, author_url=profile_url
+                short_name="oreouser", author_name=gd_name, author_url=profile_url
             )
         else:
             LOGS.exception(er)
@@ -592,7 +592,7 @@ def make_html_telegraph(title, html=""):
 async def Carbon(
     code,
     base_url="https://carbonara.solopov.dev/api/cook",
-    file_name="ultroid",
+    file_name="oreo",
     download=False,
     rayso=False,
     **kwargs,
@@ -602,7 +602,7 @@ async def Carbon(
         kwargs["text"] = code
         kwargs["theme"] = kwargs.get("theme", "breeze")
         kwargs["darkMode"] = kwargs.get("darkMode", True)
-        kwargs["title"] = kwargs.get("title", "Ultroid")
+        kwargs["title"] = kwargs.get("title", "OreO")
     else:
         kwargs["code"] = code
     con = await async_searcher(base_url, post=True, json=kwargs, re_content=True)

@@ -1,4 +1,4 @@
-# Ultroid - UserBot
+#
 
 import os
 import subprocess
@@ -68,7 +68,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
             rmtree("addons")
         if not os.path.exists("addons"):
             subprocess.run(
-                f"git clone -q -b {Repo().active_branch} https://github.com/btworeo/UltroidAddons.git addons",
+                f"git clone -q -b {Repo().active_branch} https://github.com/btworeo/ultroidAddons.git addons",
                 shell=True,
             )
         else:
@@ -76,7 +76,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
 
         if not os.path.exists("addons"):
             subprocess.run(
-                "git clone -q https://github.com/btworeo/UltroidAddons.git addons",
+                "git clone -q https://github.com/btworeo/ultroidAddons.git addons",
                 shell=True,
             )
         if os.path.exists("addons/addons.txt"):

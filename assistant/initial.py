@@ -1,23 +1,18 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# oreo
 
 import re
 
 from . import *
 
 STRINGS = {
-    1: """🎇 **Thanks for Deploying Ultroid Userbot!**
+    1: """🎇 **Thanks for Deploying Oreo Userbot!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage.""",
-    2: """🎉** About Ultroid**
+    2: """🎉** About OreoUB**
 
-🧿 Ultroid is Pluggable and powerful Telethon Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
+🧿 OreoUB is Pluggable and powerful Telethon Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
 
-❣ Made by **@TeamUltroid**""",
+❣ Made by **@RiotOreO**""",
     3: """**💡• FAQs •**
 
 -> [Username Tracker](https://t.me/UltroidUpdates/24)
@@ -32,13 +27,13 @@ STRINGS = {
 -> [Also Check](https://t.me/UltroidUpdates/14)
 
 **• To Know About Updates**
-  - Join @TeamUltroid.""",
+  - Join @RiotOreO.""",
     4: f"""• `To Know All Available Commands`
 
   - `{HNDLR}help`
   - `{HNDLR}cmds`""",
     5: """• **For Any Other Query or Suggestion**
-  - Move to **@UltroidSupportChat**.
+  - Move to **@OreoSupportChat**.
 
 • Thanks for Reaching till END.""",
 }

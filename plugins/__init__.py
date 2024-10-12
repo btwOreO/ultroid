@@ -1,10 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
-
 import asyncio
 import os
 import time
@@ -63,7 +57,6 @@ STUFF = {}
 # Feel Free to Add Any other...
 
 NOSPAM_CHAT = [
-    -1001361294038,  # UltroidSupportChat
     -1001387666944,  # PyrogramChat
     -1001109500936,  # TelethonChat
     -1001050982793,  # Python

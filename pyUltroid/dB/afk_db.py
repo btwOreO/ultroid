@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
+# OreO - UserBot
+# Copyright (C) 2021-2023 TeamOreO
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/TeamOreO/OreO/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/TeamOreO/pyOreO/blob/main/LICENSE>.
 
 from datetime import datetime as dt
 

@@ -1,10 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
-
 from . import *
 
 
@@ -68,7 +62,7 @@ def main():
 
     suc_msg = """
             ----------------------------------------------------------------------
-                Ultroid has been deployed! Visit @TheUltroid for updates!!
+                OreoUB has been deployed! Visit @RiotOreO for updates!!
             ----------------------------------------------------------------------
     """
 
@@ -101,7 +95,7 @@ def main():
         pass
 
     LOGS.info(
-        f"Took {time_formatter((time.time() - start_time)*1000)} to start •ULTROID•"
+        f"Took {time_formatter((time.time() - start_time)*1000)} to start •OreOUB•"
     )
     LOGS.info(suc_msg)
 

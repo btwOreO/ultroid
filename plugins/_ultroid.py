@@ -1,9 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# Ult.
 
 from telethon.errors import (
     BotMethodInvalidError,
@@ -15,20 +10,20 @@ from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
 REPOMSG = """
 • **ULTROID USERBOT** •\n
-• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)
-• Addons - [Click Here](https://github.com/TeamUltroid/UltroidAddons)
-• Support - @UltroidSupportChat
+• Repo - [Click Here](https://github.com/btworeo/ultroid)
+• Addons - [Click Here](https://github.com/btworeo/ultroidAddons)
+• Support - @OreoSupportChat
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url("Addons", "https://github.com/TeamUltroid/UltroidAddons"),
+        Button.url(get_string("bot_3"), "https://github.com/btworeo/ultroid"),
+        Button.url("Addons", "https://github.com/btworeo/ultroidAddons"),
     ],
-    [Button.url("Support Group", "t.me/UltroidSupportChat")],
+    [Button.url("Support Group", "t.me/OreoSupportChat")],
 ]
 
-ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
+ULTSTRING = """🎇 **Thanks for Deploying OreO Userbot!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
 
@@ -53,7 +48,7 @@ async def repify(e):
     await e.eor(REPOMSG)
 
 
-@ultroid_cmd(pattern="ultroid$")
+@ultroid_cmd(pattern="oreo$")
 async def useUltroid(rs):
     button = Button.inline("Start >>", "initft_2")
     msg = await asst.send_message(
