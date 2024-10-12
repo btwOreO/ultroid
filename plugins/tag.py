@@ -1,9 +1,7 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# oreo
+# This file is a part of < https://github.com/Team// >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Team//blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -56,21 +54,21 @@ async def _(e):
         if isinstance(x, onn):
             o += 1
             if "on" in okk:
-                xx += f"\n{inline_mention(bb)}"
+                xx += f"\n\n{inline_mention(bb)}"
         elif isinstance(x, off):
             nn += 1
             if "off" in okk and not bb.bot and not bb.deleted:
-                xx += f"\n{inline_mention(bb)}"
+                xx += f"\n\n{inline_mention(bb)}"
         elif isinstance(x, rec):
             rece += 1
             if "rec" in okk and not bb.bot and not bb.deleted:
-                xx += f"\n{inline_mention(bb)}"
+                xx += f"\n\n{inline_mention(bb)}"
         if isinstance(y, owner):
-            xx += f"\n꧁{inline_mention(bb)}꧂"
+            xx += f"\n\n👑{inline_mention(bb)}👑"
         if isinstance(y, admin) and "admin" in okk and not bb.deleted:
-            xx += f"\n{inline_mention(bb)}"
+            xx += f"\n\n{inline_mention(bb)}"
         if "all" in okk and not bb.bot and not bb.deleted:
-            xx += f"\n{inline_mention(bb)}"
+            xx += f"\n\n{inline_mention(bb)}"
         if "bot" in okk and bb.bot:
-            xx += f"\n{inline_mention(bb)}"
+            xx += f"\n\n{inline_mention(bb)}"
     await e.eor(xx)
