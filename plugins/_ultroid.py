@@ -9,7 +9,7 @@ from telethon.errors import (
 from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
 REPOMSG = """
-• **ULTROID USERBOT** •\n
+• **OreO UserBot** •\n
 • Repo - [Click Here](https://github.com/btworeo/ultroid)
 • Addons - [Click Here](https://github.com/btworeo/ultroidAddons)
 • Support - @OreoSupportChat

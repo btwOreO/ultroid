@@ -1,9 +1,5 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# oreo
+
 """
 ✘ Commands Available -
 
@@ -80,6 +76,7 @@ from . import (
 from . import humanbytes as hb
 from . import inline_mention, is_url_ok, json_parser, mediainfo, ultroid_cmd
 
+CHAT = "SangMata_beta_bot"
 
 @ultroid_cmd(pattern="tr( (.*)|$)", manager=True)
 async def _(event):
@@ -341,52 +338,38 @@ async def _(e):
 @ultroid_cmd(
     pattern="sg( (.*)|$)",
 )
-async def lastname(steal):
-    mat = steal.pattern_match.group(1).strip()
-    message = await steal.get_reply_message()
-    if mat:
+async def sangmata_beta(e):
+    args = e.pattern_match.group(2)
+    reply = await e.get_reply_message()
+    if args:
         try:
-            user_id = await steal.client.parse_id(mat)
+            user_id = await e.client.parse_id(args)
         except ValueError:
-            user_id = mat
-    elif message:
-        user_id = message.sender_id
+            user_id = args
+    elif reply:
+        user_id = reply.sender_id
     else:
-        return await steal.eor("`Use this command with reply or give Username/id...`")
-    chat = "@SangMataInfo_bot"
-    id = f"/search_id {user_id}"
-    lol = await steal.eor(get_string("com_1"))
+        return await e.eor("Use this command with reply or give Username/id...")
+
+    lol = await e.eor(get_string("com_1"))
     try:
-        async with steal.client.conversation(chat) as conv:
-            try:
-                msg = await conv.send_message(id)
-                response = await conv.get_response()
-                respond = await conv.get_response()
-                responds = await conv.get_response()
-            except YouBlockedUserError:
-                return await lol.edit("Please unblock @sangmatainfo_bot and try again")
-            if (
-                (response and response.text == "No records found")
-                or (respond and respond.text == "No records found")
-                or (responds and responds.text == "No records found")
-            ):
-                await lol.edit("No records found for this user")
-                await steal.client.delete_messages(conv.chat_id, [msg.id, response.id])
-            elif response.text.startswith("🔗"):
-                await lol.edit(respond.message)
-                await lol.reply(responds.message)
-            elif respond.text.startswith("🔗"):
-                await lol.edit(response.message)
-                await lol.reply(responds.message)
-            else:
-                await lol.edit(respond.message)
-                await lol.reply(response.message)
-            await steal.client.delete_messages(
-                conv.chat_id,
-                [msg.id, responds.id, respond.id, response.id],
-            )
-    except AsyncTimeout:
-        await lol.edit("Error: @SangMataInfo_bot is not responding!.")
+        async with e.client.conversation(CHAT, total_timeout=15) as conv:
+            msg = await conv.send_message(f"allhistory {user_id}")
+            response = await conv.get_response()
+            if response and "no data available" in response.text.lower():
+                await lol.edit("okbie, No records found for this user")
+            elif str(user_id) in response.message:
+                await lol.edit(response.text)
+    except YouBlockedUserError:
+        return await lol.edit(f"Please unblock @{CHAT} and try again.")
+    except TimeoutError:
+        await lol.edit("Bot didn't respond in time.")
+    except Exception as ex:
+        LOGS.exception(ex)
+        await lol.edit(f"Error: {ex}")
+    finally:
+        await lol.edit(response.text)
+        await e.client.send_read_acknowledge(CHAT)
 
 
 @ultroid_cmd(pattern="webshot( (.*)|$)")
@@ -457,5 +440,5 @@ async def magic(event):
     if not response.get("status"):
         return await event.eor(f'**ERROR :** `{response["message"]}`')
     await event.eor(
-        f"• **Ultroid Tiny**\n• Given Url : {url}\n• Shorten Url : {data['response']['tinyUrl']}"
+        f"• **OreO Tiny**\n• Given Url : {url}\n• Shorten Url : {data['response']['tinyUrl']}"
     )
