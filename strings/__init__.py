@@ -14,7 +14,7 @@ except ModuleNotFoundError:
 ULTConfig.lang = udB.get_key("language") or os.getenv("LANGUAGE", "en")
 
 languages = {}
-PATH = "{}.yml"
+PATH = "strings/{}.yml"
 
 
 def load(file):
@@ -70,7 +70,7 @@ def get_help(key):
 
 
 def get_languages() -> Dict[str, Union[str, List[str]]]:
-    for file in glob("*yml"):
+    for file in glob("strings/*yml"):
         load(file)
     return {
         code: {
