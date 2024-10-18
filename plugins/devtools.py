@@ -1,9 +1,4 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2023 TeamUltroid
-#
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# oreo
 
 from . import get_help
 
@@ -358,20 +353,20 @@ async def doie(e):
     if "main(" not in match:
         new_m = "".join(" " * 4 + i + "\n" for i in match.split("\n"))
         match = DUMMY_CPP.replace("!code", new_m)
-    open("cpp-ultroid.cpp", "w").write(match)
-    m = await bash("g++ -o CppUltroid cpp-ultroid.cpp")
+    open("cpp-oreo.cpp", "w").write(match)
+    m = await bash("g++ -o CppOreo cpp-oreo.cpp")
     o_cpp = f"• **Eval-Cpp**\n`{match}`"
     if m[1]:
         o_cpp += f"\n\n**• Error :**\n`{m[1]}`"
         if len(o_cpp) > 3000:
-            os.remove("cpp-ultroid.cpp")
-            if os.path.exists("CppUltroid"):
-                os.remove("CppUltroid")
+            os.remove("cpp-oreo.cpp")
+            if os.path.exists("CppOreo"):
+                os.remove("CppOreo")
             with BytesIO(str.encode(o_cpp)) as out_file:
                 out_file.name = "error.txt"
                 return await msg.reply(f"`{match}`", file=out_file)
         return await eor(msg, o_cpp)
-    m = await bash("./CppUltroid")
+    m = await bash("./CppOreo")
     if m[0] != "":
         o_cpp += f"\n\n**• Output :**\n`{m[0]}`"
     if m[1]:
@@ -382,5 +377,5 @@ async def doie(e):
             await msg.reply(f"`{match}`", file=out_file)
     else:
         await eor(msg, o_cpp)
-    os.remove("CppUltroid")
-    os.remove("cpp-ultroid.cpp")
+    os.remove("CppOreo")
+    os.remove("cpp-oreo.cpp")
